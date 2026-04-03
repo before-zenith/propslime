@@ -16,7 +16,8 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"net.zenith.propslime.PropDevSlime"
+			"net.zenith.propslime.PropDevSlime",
+			"net.zenith.propslime.item.custom.PropDevSlimeModItems"
 		],
 		"client": [
 			"net.zenith.propslime.client.PropDevSlimeClient"
