@@ -21,6 +21,8 @@ public class ModItems {
             .saturationModifier(1.6F)
             .build()));
 
+    public static final Item PROP_SLIME_BALL = register("prop_slime_ball", Item::new, new Item.Properties());
+
 
     // some weird ahh function i found on fabric documentation
     public static <T extends Item> T register(String name, Function<Item.Properties, T> itemFactory, Item.Properties settings) {
@@ -37,5 +39,7 @@ public class ModItems {
         // adding mango to the creative tabs, specifically Food and Drinks
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FOOD_AND_DRINKS)
                 .register((itemGroup) -> itemGroup.accept(ModItems.MANGO));
+        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.INGREDIENTS)
+                .register((itemGroup) -> itemGroup.accept(ModItems.PROP_SLIME_BALL));
     }
 }
