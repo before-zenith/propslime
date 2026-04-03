@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "propslime",
+	"version": "${version}",
+	"name": "PropDev Slime",
+	"description": "Propdev is in minecraft now!",
+	"authors": [
+		"Before_ZenitH"
+	],
+	"contact": {
+		"homepage": "https://github.com/before-zenith",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/propslime/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.zenith.propslime.PropDevSlime"
+		],
+		"client": [
+			"net.zenith.propslime.client.PropDevSlimeClient"
+		],
+		"fabric-datagen": [
+			"net.zenith.propslime.client.PropDevSlimeDataGenerator"
+		]
+	},
+	"mixins": [
+		"propslime.mixins.json",
+		{
+			"config": "propslime.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.18.6",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
