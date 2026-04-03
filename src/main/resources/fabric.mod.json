@@ -17,7 +17,8 @@
 	"entrypoints": {
 		"main": [
 			"net.zenith.propslime.PropDevSlime",
-			"net.zenith.propslime.item.custom.PropDevSlimeModItems"
+			"net.zenith.propslime.item.custom.PropDevSlimeModItems",
+			"net.zenith.propslime.event.PropDevSlimeModEvents"
 		],
 		"client": [
 			"net.zenith.propslime.client.PropDevSlimeClient"

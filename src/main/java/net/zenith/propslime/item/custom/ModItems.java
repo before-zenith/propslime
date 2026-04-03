@@ -15,11 +15,14 @@ import java.util.function.Function;
 
 public class ModItems {
     public static final Item MANGO = register("mango",  Item::new, new Item.Properties()
+            // saying to minecraft "hey, this is a food"
             .food(new FoodProperties.Builder()
             .nutrition(4)
             .saturationModifier(1.6F)
             .build()));
 
+
+    // some weird ahh function i found on fabric documentation
     public static <T extends Item> T register(String name, Function<Item.Properties, T> itemFactory, Item.Properties settings) {
         ResourceKey<Item> itemKey = ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(PropDevSlime.MOD_ID, name));
 
@@ -31,6 +34,7 @@ public class ModItems {
     }
 
     public static void initialize() {
+        // adding mango to the creative tabs, specifically Food and Drinks
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FOOD_AND_DRINKS)
                 .register((itemGroup) -> itemGroup.accept(ModItems.MANGO));
     }
