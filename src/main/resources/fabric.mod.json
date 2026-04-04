@@ -18,7 +18,8 @@
 		"main": [
 			"net.zenith.propslime.PropDevSlime",
 			"net.zenith.propslime.item.custom.PropDevSlimeModItems",
-			"net.zenith.propslime.event.PropDevSlimeModEvents"
+			"net.zenith.propslime.event.PropDevSlimeModEvents",
+			"net.zenith.propslime.block.PropDevSlimeModBlocks"
 		],
 		"client": [
 			"net.zenith.propslime.client.PropDevSlimeClient"
